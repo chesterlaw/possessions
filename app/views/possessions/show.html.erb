@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @possession.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @possession.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @possession.image_url %>
+</p>
+
+<p>
+  <strong>Got rid of at:</strong>
+  <%= @possession.got_rid_of_at %>
+</p>
+
+<p>
+  <strong>Got rid of reason:</strong>
+  <%= @possession.got_rid_of_reason %>
+</p>
+
+<%= link_to 'Edit', edit_possession_path(@possession) %> |
+<%= link_to 'Back', possessions_path %>

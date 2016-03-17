@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Possessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Got rid of at</th>
+      <th>Got rid of reason</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @possessions.each do |possession| %>
+      <tr>
+        <td><%= possession.name %></td>
+        <td><%= possession.description %></td>
+        <td><%= possession.image_url %></td>
+        <td><%= possession.got_rid_of_at %></td>
+        <td><%= possession.got_rid_of_reason %></td>
+        <td><%= link_to 'Show', possession %></td>
+        <td><%= link_to 'Edit', edit_possession_path(possession) %></td>
+        <td><%= link_to 'Destroy', possession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Possession', new_possession_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  image_url: MyString
+  got_rid_of_at: 2016-03-18 01:24:30
+  got_rid_of_reason: MyText
+
+two:
+  name: MyString
+  description: MyText
+  image_url: MyString
+  got_rid_of_at: 2016-03-18 01:24:30
+  got_rid_of_reason: MyText
