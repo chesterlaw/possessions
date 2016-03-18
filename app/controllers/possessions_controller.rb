@@ -2,28 +2,20 @@ class PossessionsController < ApplicationController
   before_action :set_possession, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
 
-  # GET /possessions
-  # GET /possessions.json
   def index
     @possessions = Possession.all
   end
 
-  # GET /possessions/1
-  # GET /possessions/1.json
   def show
   end
 
-  # GET /possessions/new
   def new
     @possession = Possession.new
   end
 
-  # GET /possessions/1/edit
   def edit
   end
 
-  # POST /possessions
-  # POST /possessions.json
   def create
     @possession = current_user.possessions.new(possession_params)
 
@@ -38,8 +30,6 @@ class PossessionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /possessions/1
-  # PATCH/PUT /possessions/1.json
   def update
     respond_to do |format|
       if @possession.update(possession_params)
@@ -52,8 +42,6 @@ class PossessionsController < ApplicationController
     end
   end
 
-  # DELETE /possessions/1
-  # DELETE /possessions/1.json
   def destroy
     @possession.destroy
     respond_to do |format|
