@@ -1,6 +1,7 @@
 .possessions-title {
   text-align: center;
   font-size: 3rem;
+  font-weight: 800;
 }
 
 .possession-box {
@@ -9,7 +10,8 @@
 }
 
 .possession-box__name {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .possession-box__description {
@@ -19,5 +21,12 @@
   width: 300px;
   display: block;
   margin: 0 auto;
+}
+
+.possession-box__edit {
+  background: lightblue;
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
 }
 
