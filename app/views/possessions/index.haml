@@ -10,7 +10,6 @@
     .possession-box__description= possession.description
     = image_tag possession.image_url, class: 'possession-box__image'
     .possession-box__edit= link_to 'Edit', edit_possession_path(possession)
-    = link_to 'I never had this.', possession, method: :delete, data: { confirm: 'Are you sure?' }
 
 = link_to 'New Possession', new_possession_path
 
