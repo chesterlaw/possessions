@@ -9,7 +9,7 @@
         <%= image_tag possession.image_url %>
         <p><%= possession.user.email %></p>
         <%= link_to 'Edit', edit_possession_path(possession) %>
-        <%= link_to 'Destroy', possession, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'I never had this.', possession, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     <% end %>
   </tbody>
