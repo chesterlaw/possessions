@@ -1,12 +1,13 @@
 .possessions-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
+  text-decoration: underline;
 }
 
 .possession-box {
   text-align: center;
-  margin: 0 auto;
+  margin: 1.5rem auto;
 }
 
 .possession-box__name {
@@ -14,13 +15,11 @@
   font-weight: 500;
 }
 
-.possession-box__description {
-}
-
 .possession-box__image {
   width: 300px;
   display: block;
-  margin: 0 auto;
+  margin: 0.2rem auto;
+  border: 1px solid #aaa;
 }
 
 .possession-box__edit {
@@ -28,5 +27,6 @@
   display: inline-block;
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
+  margin-top: 0.3rem;
 }
 
