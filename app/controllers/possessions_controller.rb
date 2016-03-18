@@ -29,7 +29,7 @@ class PossessionsController < ApplicationController
 
     respond_to do |format|
       if @possession.save
-        format.html { redirect_to @possession, notice: 'Possession was successfully created.' }
+        format.html { redirect_to possessions_path, notice: 'Possession was successfully created.' }
         format.json { render :show, status: :created, location: @possession }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class PossessionsController < ApplicationController
   def update
     respond_to do |format|
       if @possession.update(possession_params)
-        format.html { redirect_to @possession, notice: 'Possession was successfully updated.' }
+        format.html { redirect_to possessions_path, notice: 'Possession was successfully updated.' }
         format.json { render :show, status: :ok, location: @possession }
       else
         format.html { render :edit }
