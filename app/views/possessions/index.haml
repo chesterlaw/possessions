@@ -8,7 +8,7 @@
   .possession-box
     .possession-box__name= possession.name
     .possession-box__description= possession.description
-    .possession-box__image= image_tag possession.image_url
+    = image_tag possession.image_url, class: 'possession-box__image'
     .possession-box__edit= link_to 'Edit', edit_possession_path(possession)
     = link_to 'I never had this.', possession, method: :delete, data: { confirm: 'Are you sure?' }
 
