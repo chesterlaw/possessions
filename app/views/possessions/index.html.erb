@@ -8,6 +8,7 @@
       <th>Image url</th>
       <th>Got rid of at</th>
       <th>Got rid of reason</th>
+      <th>User email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= possession.image_url %></td>
         <td><%= possession.got_rid_of_at %></td>
         <td><%= possession.got_rid_of_reason %></td>
+        <td><%= possession.user.email %></td>
         <td><%= link_to 'Edit', edit_possession_path(possession) %></td>
         <td><%= link_to 'Destroy', possession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
