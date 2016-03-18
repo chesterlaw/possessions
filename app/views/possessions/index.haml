@@ -8,6 +8,6 @@
   .possession-box
     .possession-box__name= possession.name
     .possession-box__description= possession.description
-    = image_tag possession.image_url, class: 'possession-box__image'
+    = image_tag possession.image_url, class: 'possession-box__image' if possession.image_url.present?
     .possession-box__edit= link_to 'Edit', edit_possession_path(possession)
 
