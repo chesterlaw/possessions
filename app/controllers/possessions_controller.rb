@@ -28,14 +28,18 @@ class PossessionsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @possession.update(possession_params)
-        format.html { redirect_to possessions_path, notice: 'Possession was successfully updated.' }
-        format.json { render :show, status: :ok, location: @possession }
-      else
-        format.html { render :edit }
-        format.json { render json: @possession.errors, status: :unprocessable_entity }
+    if @possession.user == current_user
+      respond_to do |format|
+        if @possession.update(possession_params)
+          format.html { redirect_to possessions_path, notice: 'Possession was successfully updated.' }
+          format.json { render :show, status: :ok, location: @possession }
+        else
+          format.html { render :edit }
+          format.json { render json: @possession.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to root_path
     end
   end
 
