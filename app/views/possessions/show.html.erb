@@ -8,10 +8,7 @@
   <%= @possession.description %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @possession.image_url %>
-</p>
+<%= image_tag @possession.image_url %>
 
 <%= link_to 'Edit', edit_possession_path(@possession) %> |
 <%= link_to 'Back', possessions_path %>
