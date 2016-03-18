@@ -1,0 +1,14 @@
+= link_to '< Back', possessions_path
+%h1 Editing Possession
+
+= render 'form'
+
+%button.got-rid I got rid of this.
+= link_to 'I never had this.', @possession, method: :delete, data: { confirm: 'Are you sure?' }
+
+.got-rid-modal
+  %h1 Did you really get rid of it?
+  %textarea{placeholder: "If so, why? (optional)"}
+  %button Yes, really.
+  %button Nope.
+
