@@ -10,7 +10,6 @@
   %p Did you really get rid of it?
   = form_for(@possession) do |f|
     = f.text_area :got_rid_of_reason, placeholder: 'If so, why? (optional)'
-    = f.hidden_field :got_rid_of, value: true
     = f.submit 'Yes, really.'
-    .close-modal Nope.
+    .modal__close-modal Nope.
     
