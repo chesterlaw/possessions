@@ -1,0 +1,16 @@
+%h1
+  Possessions
+  (
+  = @possessions.count
+  )
+
+- @possessions.each do |possession|
+  .possession-box
+    %p= possession.name
+    %p= possession.description
+    = image_tag possession.image_url
+    = link_to 'Edit', edit_possession_path(possession)
+    = link_to 'I never had this.', possession, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Possession', new_possession_path
+
