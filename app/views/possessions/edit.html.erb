@@ -2,7 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @possession %> |
 <%= link_to 'I never had this.', @possession, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', possessions_path %>
 
