@@ -6,9 +6,6 @@ class PossessionsController < ApplicationController
     @possessions = Possession.all
   end
 
-  def show
-  end
-
   def new
     @possession = Possession.new
   end
