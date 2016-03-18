@@ -1,30 +1,16 @@
 <h1>Possessions</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Got rid of at</th>
-      <th>Got rid of reason</th>
-      <th>User email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @possessions.each do |possession| %>
-      <tr>
-        <td><%= link_to possession.name, possession %></td>
-        <td><%= possession.description %></td>
-        <td><%= possession.image_url %></td>
-        <td><%= possession.got_rid_of_at %></td>
-        <td><%= possession.got_rid_of_reason %></td>
-        <td><%= possession.user.email %></td>
-        <td><%= link_to 'Edit', edit_possession_path(possession) %></td>
-        <td><%= link_to 'Destroy', possession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div>
+        <%= link_to possession.name, possession %>
+        <p><%= possession.description %></p>
+        <%= image_tag possession.image_url %>
+        <p><%= possession.user.email %></p>
+        <%= link_to 'Edit', edit_possession_path(possession) %>
+        <%= link_to 'Destroy', possession, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     <% end %>
   </tbody>
 </table>
