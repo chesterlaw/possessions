@@ -15,12 +15,11 @@
   <tbody>
     <% @possessions.each do |possession| %>
       <tr>
-        <td><%= possession.name %></td>
+        <td><%= link_to possession.name, possession %></td>
         <td><%= possession.description %></td>
         <td><%= possession.image_url %></td>
         <td><%= possession.got_rid_of_at %></td>
         <td><%= possession.got_rid_of_reason %></td>
-        <td><%= link_to 'Show', possession %></td>
         <td><%= link_to 'Edit', edit_possession_path(possession) %></td>
         <td><%= link_to 'Destroy', possession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
