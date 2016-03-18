@@ -1,0 +1,52 @@
+html { height: 100%; }
+
+*, input { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+body, .border-box, div, form, p, a, footer, input, textarea, label, img {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 0.4em;
+  width: 100%;
+  font-size: 1.1em;
+  border: 1px solid #D4D4D4;
+  display: block;
+  margin-top: 0.6em;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+}
+
+p {
+  line-height: 1.6;
+}
+
+input[type='submit'] {
+  width: auto;
+  margin: 0 auto;
+  background: 0;
+  border: 0;
+}
+
+input[type='radio'] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 0.1em;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
