@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, skip: :registrations
   root to: 'possessions#index'
   resources :possessions, except: :show
   # The priority is based upon order of creation: first created -> highest priority.
