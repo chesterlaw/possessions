@@ -1,15 +1,16 @@
-= link_to '< Back', possessions_path
-%h1 Editing Possession
+.wrapper.wrapper--edit-possession
+  = link_to '< All Possessions', possessions_path
+  %h1.wrapper--edit-possession__title Editing Possession
 
-= render 'form'
+  = render 'form'
 
-%button.got-rid I got rid of this.
-= link_to 'I never had this.', @possession, method: :delete, data: { confirm: 'Are you sure?' }
+  .button.got-rid I got rid of this.
+  = link_to 'I never had this.', @possession, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
 
-.modal.modal--got-rid
-  %p Did you really get rid of it?
-  = form_for(@possession) do |f|
-    = f.text_area :got_rid_of_reason, placeholder: 'If so, why? (optional)'
-    = f.submit 'Yes, really.'
-    .modal__close-modal Nope.
-    
+  .modal.modal--got-rid
+    %p Did you really get rid of it?
+    = form_for(@possession) do |f|
+      = f.text_area :got_rid_of_reason, placeholder: 'If so, why? (optional)'
+      = f.submit 'Yes, really.'
+      .modal__close-modal Nope.
+      
