@@ -15,8 +15,13 @@
   <%= link_to 'Login', new_user_session_path %>
 <% end %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice.present? %>
+  <p class="flash flash--notice"><%= notice %></p>
+<% end %>
+
+<% if alert.present? %>
+  <p class="flash flash--alert"><%= alert %></p>
+<% end %>
 
 <div class='white-out'></div>
 
