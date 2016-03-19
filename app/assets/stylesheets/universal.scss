@@ -30,8 +30,6 @@ p {
 
 input[type='submit'] {
   width: auto;
-  margin: 0 auto;
-  background: 0;
   border: 0;
 }
 
@@ -44,6 +42,7 @@ textarea {
   width: 100%;
   margin-bottom: 0.1em;
   outline: 0;
+  border: 1px solid #D4D4D4;
   -webkit-appearance: none;
   -moz-appearance: none;
   -moz-box-sizing: border-box;
