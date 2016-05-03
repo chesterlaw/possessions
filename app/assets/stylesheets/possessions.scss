@@ -27,7 +27,6 @@ $possessions-width: 600px;
   font-weight: 500;
 }
 
-
 .possession-box {
   margin-bottom: 1rem;
   width: 50%;
@@ -43,11 +42,27 @@ $possessions-width: 600px;
 .possession-box__image {
   float: left;
   width: 150px;
+  width: 25%;
+}
+
+.possession-box__image--no-image {
+  background: white;
+  display: block;
+  height: 100%;
+  height: 90px;
+
+  p {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 2rem;
+    color: black;
+  }
 }
 
 .possession-box__content {
   float: left;
   padding-left: 1rem;
+  width: 75%;
 }
 
 .possession-box__content__name {

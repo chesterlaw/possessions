@@ -7,7 +7,11 @@
 
 - @possessions.each do |possession|
   .possession-box
-    = image_tag possession.image_url, class: 'possession-box__image' if possession.image_url.present?
+    - if possession.image_url.present?
+      = image_tag possession.image_url, class: 'possession-box__image'
+    - else
+      .possession-box__image.possession-box__image--no-image
+        %p No Image
     .possession-box__content
       .possession-box__content__name= possession.name
       - if possession.description.present?
