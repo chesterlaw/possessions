@@ -1,14 +1,17 @@
 .possessions-title
-  Possessions (
-  %span>= @possessions.count
-  )
+  %p Possessions
+
+.possessions-total
+  Total:
+  %span= @possessions.count
 
 - @possessions.each do |possession|
   .possession-box
-    .possession-box__name= possession.name
     = image_tag possession.image_url, class: 'possession-box__image' if possession.image_url.present?
-    .possession-box__description
-      = possession.description
-      - if current_user
-        = link_to '(Edit)', edit_possession_path(possession), class: 'possession-box__edit'
-
+    .possession-box__content
+      .possession-box__content__name= possession.name
+      - if possession.description.present?
+        .possession-box__content__description
+          = possession.description
+          - if current_user
+            = link_to '(Edit)', edit_possession_path(possession), class: 'possession-box__edit'

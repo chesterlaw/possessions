@@ -1,33 +1,61 @@
+$possessions-width: 600px;
+
 .possessions-title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-decoration: underline;
+  margin: 2.5rem auto 0;
+  padding: 0.3rem 0 0.1rem;
+  width: $possessions-width;
+  line-height: 1;
+  background: black;
+  border-radius: 10px;
+
+  p {
+    display: inline;
+    font-size: 3.5rem;
+    font-weight: 800;
+    padding: 0 0.9rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+  }
 }
+
+.possessions-total {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 
 .possession-box {
-  text-align: center;
-  margin: 1.5rem auto;
+  margin-bottom: 1rem;
+  width: 50%;
+  max-width: $possessions-width;
+  margin: 1rem auto;
+  overflow: auto;
+  background: black;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
 }
 
-.possession-box__name {
+.possession-box__image {
+  float: left;
+  width: 150px;
+}
+
+.possession-box__content {
+  float: left;
+  padding-left: 1rem;
+}
+
+.possession-box__content__name {
   font-size: 2rem;
   font-weight: 500;
 }
 
-.possession-box__image {
-  width: 300px;
-  display: block;
-  margin: 0.2rem auto;
-  border: 1px solid #aaa;
-}
-
-.possession-box__edit {
-  cursor: pointer;
-  
-  &:hover {
-    text-decoration: underline;
-  }
+.possession-box__content__description {
 }
 
 .wrapper--edit-possession__title {
