@@ -14,8 +14,7 @@
         %p No Image
     .possession-box__content
       .possession-box__content__name= possession.name
-      - if possession.description.present?
-        .possession-box__content__description
-          = possession.description
-          - if current_user
-            = link_to '(Edit)', edit_possession_path(possession), class: 'possession-box__edit'
+      .possession-box__content__description
+        = possession.description
+        - if current_user
+          = link_to '(Edit)', edit_possession_path(possession), class: 'possession-box__edit'
