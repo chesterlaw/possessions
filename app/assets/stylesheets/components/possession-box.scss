@@ -1,0 +1,72 @@
+$possession-box__image-width: 100px;
+
+.possession-box {
+  border: 1px solid black;
+  width: 550px;
+  margin: 0 auto;
+  position: relative;
+  overflow: auto;
+}
+
+.possession-box__image {
+  width: $possession-box__image-width;
+  height: $possession-box__image-width;
+  float: left;
+
+  img, p {
+    width: $possession-box__image-width;
+    height: $possession-box__image-width;
+    border-right: 1px solid black;
+  }
+}
+
+.possession-box__image--no-image {
+}
+
+.possession-box__content {
+  float: right;
+  width: calc(100% - #{$possession-box__image-width});
+  padding-bottom: 0.5rem;
+}
+
+.possession-box__content__title {
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.possession-box__content__details {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.possession-box__content__details__text {
+  float: left;
+  width: 80%;
+}
+
+.possession-box__content__details__date {
+  width: 15%;
+  border: 1px solid black;
+  padding: 0.3rem;
+  padding-bottom: 0;
+  float: right;
+  line-height: 1;
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+}
+
+.possession-box__content__details__date__month {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.possession-box__content__details__date__year {
+  font-size: 1.8rem;
+  text-align: right;
+  display: block;
+  margin-top: 0.1rem;
+}
+

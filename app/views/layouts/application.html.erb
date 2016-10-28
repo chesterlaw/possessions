@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<div class='possessions-title'>Possessions</div>
+
 <div class='title-bar <%= 'title-bar--unlogged-in' if !current_user %>'>
   <% if current_user %>
     <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
