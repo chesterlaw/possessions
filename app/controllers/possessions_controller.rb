@@ -31,6 +31,11 @@ class PossessionsController < ApplicationController
     if @possession.user == current_user
       respond_to do |format|
         if @possession.update(possession_params)
+          if @possession.got_rid_of_reason
+            @possession.got_rid_of_at = Time.now
+            @possession.got_rid_of = true
+            @possession.save!
+          end
           format.html { redirect_to possessions_path, notice: 'Possession was successfully updated.' }
           format.json { render :show, status: :ok, location: @possession }
         else

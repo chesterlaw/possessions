@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028072722) do
+ActiveRecord::Schema.define(version: 20161028073603) do
 
   create_table "possessions", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20161028072722) do
     t.integer  "month_purchased"
     t.integer  "year_purchased"
     t.string   "amazon_link"
+    t.boolean  "got_rid_of"
   end
 
   create_table "users", force: :cascade do |t|
