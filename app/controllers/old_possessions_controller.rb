@@ -1,0 +1,2 @@
+class OldPossessionsController < ApplicationController
+end
