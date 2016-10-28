@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   devise_for :users, skip: :registrations
   root to: 'possessions#index'
   resources :possessions, except: :show
