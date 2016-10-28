@@ -3,7 +3,9 @@ class PossessionsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @possessions = Possession.all.where(got_rid_of: false)
+    @uncategorized_possessions = Possession.all.where(got_rid_of: false, category: nil)
+
+    @categories = Category.all.includes(:possessions)
   end
 
   def new

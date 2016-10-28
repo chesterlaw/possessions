@@ -1,6 +1,12 @@
 .possessions-total
   Total:
-  %span= @possessions.count
+  %span= Possession.count
 
-- @possessions.each do |possession|
+- @categories.each do |category|
+  %h1= category.name
+  - category.possessions.each do |possession|
+    = render 'components/possession_box', possession: possession
+
+%h1 Others
+- @uncategorized_possessions.each do |possession|
   = render 'components/possession_box', possession: possession
