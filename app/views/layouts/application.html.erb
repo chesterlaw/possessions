@@ -9,14 +9,16 @@
 <body>
 
 <div class='title-bar <%= 'title-bar--unlogged-in' if !current_user %>'>
-  <%= link_to 'Possessions', root_path, class: 'title-bar__title' %>
+  <div class='title-bar__links'>
+    <% if current_user %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <%= link_to 'New Possession', new_possession_path %>
+    <% else %>
+      <%= link_to 'Login', new_user_session_path %>
+    <% end %>
+  </div>
 
-  <% if current_user %>
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-    <%= link_to 'New Possession', new_possession_path %>
-  <% else %>
-    <%= link_to 'Login', new_user_session_path %>
-  <% end %>
+  <%= link_to 'Possessions', root_path, class: 'title-bar__title' %>
 </div>
 
 <% if notice.present? %>

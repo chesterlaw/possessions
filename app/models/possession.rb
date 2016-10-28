@@ -17,12 +17,4 @@ class Possession < ActiveRecord::Base
       "????"
     end
   end
-
-  def category_name
-    if category
-      category.name
-    else
-      nil
-    end
-  end
 end

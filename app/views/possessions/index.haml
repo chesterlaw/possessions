@@ -2,11 +2,14 @@
   Total:
   %span= Possession.count
 
-- @categories.each do |category|
-  %h1= category.name
-  - category.possessions.each do |possession|
-    = render 'components/possession_box', possession: possession
+.content-wrapper
+  - @categories.each do |category|
+    .possession-column
+      .possession-column__title= category.name + " (#{category.possessions.count})"
+      - category.possessions.each do |possession|
+        = render 'components/possession_box', possession: possession
 
-%h1 Others
-- @uncategorized_possessions.each do |possession|
-  = render 'components/possession_box', possession: possession
+  .possession-column
+    .possession-column__title Others
+    - @uncategorized_possessions.each do |possession|
+      = render 'components/possession_box', possession: possession

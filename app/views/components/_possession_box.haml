@@ -12,7 +12,6 @@
       .possession-box__content__details__text
         .possession-box__content__details__text__description
           = possession.description
-          = possession.category_name
           - if possession.amazon_link?
             = link_to 'Buy on Amazon', possession.amazon_link
           - if current_user

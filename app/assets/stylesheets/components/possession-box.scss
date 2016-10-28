@@ -2,25 +2,33 @@ $possession-box__image-width: 100px;
 
 .possession-box {
   border: 1px solid black;
-  width: 550px;
+  border-bottom: 0;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .possession-box__image {
   width: $possession-box__image-width;
   height: $possession-box__image-width;
   float: left;
+  border-right: 1px solid black;
+  overflow: auto;
 
   img, p {
     width: $possession-box__image-width;
     height: $possession-box__image-width;
-    border-right: 1px solid black;
   }
 }
 
 .possession-box__image--no-image {
+  p {
+    transform: rotate(-45deg);
+    position: relative;
+    left: 35%;
+    top: 16%;
+  }
 }
 
 .possession-box__content {
