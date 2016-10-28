@@ -59,6 +59,6 @@ class PossessionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def possession_params
-      params.require(:possession).permit(:name, :description, :image_url, :got_rid_of_at, :got_rid_of_reason)
+      params.require(:possession).permit(:name, :description, :image_url, :got_rid_of_at, :got_rid_of_reason, :month_purchased, :year_purchased, :amazon_link)
     end
 end

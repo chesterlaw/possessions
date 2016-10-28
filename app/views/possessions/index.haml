@@ -3,23 +3,4 @@
   %span= @possessions.count
 
 - @possessions.each do |possession|
-  .possession-box
-    - if possession.image_url.present?
-      .possession-box__image
-        = image_tag possession.image_url
-    - else
-      .possession-box__image.possession-box__image--no-image
-        %p No Image
-    .possession-box__content
-      .possession-box__content__title= possession.name
-
-      .possession-box__content__details
-        .possession-box__content__details__text
-          .possession-box__content__details__text__description
-            = possession.description
-            - if current_user
-              = link_to '(Edit)', edit_possession_path(possession), class: 'possession-box__edit'
-
-        .possession-box__content__details__date
-          .possession-box__content__details__date__month July
-          .possession-box__content__details__date__year 2013
+  = render 'components/possession_box', possession: possession
