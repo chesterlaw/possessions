@@ -1,11 +1,16 @@
+$possession-column-gap: 1.5rem;
+
 .possession-column {
   width: 50%;
-  border-bottom: 1px solid black;
-  margin-bottom: 2rem;
+  overflow: hidden;
+  float: left;
 }
 
-.possession-column__title {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 800;
+.possession-column--left {
+  padding-right: $possession-column-gap/2;
+}
+
+.possession-column--right {
+  padding-left: $possession-column-gap/2;
+  margin-top: 5rem;
 }

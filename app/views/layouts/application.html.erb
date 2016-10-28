@@ -14,7 +14,7 @@
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
       <%= link_to 'New Possession', new_possession_path %>
     <% else %>
-      <%= link_to 'Login', new_user_session_path %>
+      <%= link_to 'Login', new_user_session_path, class: 'title-bar__links__login-link' %>
     <% end %>
   </div>
 

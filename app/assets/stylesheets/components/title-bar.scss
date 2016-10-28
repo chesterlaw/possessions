@@ -7,16 +7,16 @@
   }
 }
 
-.title-bar--unlogged-in {
+.title-bar__links__login-link {
   opacity: 0;
+}
 
-  a:hover {
-    cursor: default;
-  }
+.title-bar--unlogged-in {
+  cursor: default;
 }
 
 .title-bar__links {
-  float: left;
+  float: right;
   width: 20%;
 }
 
@@ -27,6 +27,6 @@ a.title-bar__title {
   font-size: 1.5rem;
   line-height: 1;
   margin: 0.4rem 0 0.3rem;
-  float: left;
+  float: right;
   width: 60%;
 }

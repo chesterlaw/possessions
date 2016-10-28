@@ -3,9 +3,8 @@ class PossessionsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
+    @even_categories, @odd_categories = Category.all.partition { |category| category.order.even? }
     @uncategorized_possessions = Possession.all.where(got_rid_of: false, category: nil)
-
-    @categories = Category.all.includes(:possessions)
   end
 
   def new

@@ -7,6 +7,10 @@ $possession-box__image-width: 100px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+
+  &:last-child {
+    border-bottom: 1px solid black;
+  }
 }
 
 .possession-box__image {
@@ -14,7 +18,7 @@ $possession-box__image-width: 100px;
   height: $possession-box__image-width;
   float: left;
   border-right: 1px solid black;
-  overflow: auto;
+  overflow: hidden;
 
   img, p {
     width: $possession-box__image-width;
