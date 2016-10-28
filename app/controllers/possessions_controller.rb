@@ -3,7 +3,7 @@ class PossessionsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @possessions = Possession.all
+    @possessions = Possession.all.where(got_rid_of: false)
   end
 
   def new
