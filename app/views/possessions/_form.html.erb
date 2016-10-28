@@ -40,6 +40,11 @@
     <%= f.text_field :amazon_link %>
   </div>
 
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.select(:category_id, current_user.categories.map {|category| [category.name, category.id]}, include_blank: true) %>
+  </div>
+
   <div class="actions">
     <%= f.submit 'Update', class: :button %>
   </div>

@@ -1,11 +1,10 @@
-%h1 Listing categories
+%h1 Your categories
 
 %table
   %thead
     %tr
       %th Name
       %th Order
-      %th User
       %th
       %th
       %th
@@ -15,8 +14,6 @@
       %tr
         %td= category.name
         %td= category.order
-        %td= category.user_id
-        %td= link_to 'Show', category
         %td= link_to 'Edit', edit_category_path(category)
         %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
 

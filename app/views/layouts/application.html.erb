@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<div class='possessions-title'>Possessions</div>
-
 <div class='title-bar <%= 'title-bar--unlogged-in' if !current_user %>'>
+  <%= link_to 'Possessions', root_path, class: 'title-bar__title' %>
+
   <% if current_user %>
     <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
     <%= link_to 'New Possession', new_possession_path %>
