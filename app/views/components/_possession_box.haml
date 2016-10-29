@@ -12,11 +12,13 @@
       .possession-box__content__details__text
         .possession-box__content__details__text__description
           = possession.description
-          - if possession.amazon_link?
-            = link_to 'Buy on Amazon', possession.amazon_link, target: '_blank'
           - if current_user
             = link_to '(Edit)', edit_possession_path(possession), class: 'possession-box__edit'
+          %br
+          - if possession.amazon_link?
+            = link_to 'Buy on Amazon', possession.amazon_link, target: '_blank'
 
       .possession-box__content__details__date
         .possession-box__content__details__date__month= possession.month_purchased_shown
         .possession-box__content__details__date__year= possession.year_purchased_shown
+

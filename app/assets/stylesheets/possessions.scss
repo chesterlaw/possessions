@@ -1,3 +1,5 @@
+$responsive-turning-point: 900px;
+
 .possessions-title {
   text-align: center;
   background: black;
@@ -12,7 +14,11 @@
 }
 
 .content-wrapper {
-  max-width: 1000px;
+  max-width: 850px;
   width: 98.5%;
   margin: 0 auto;
+
+  @media only screen and (max-width: $responsive-turning-point) {
+    max-width: 450px;
+  }
 }
