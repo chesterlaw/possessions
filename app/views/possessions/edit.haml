@@ -10,6 +10,6 @@
   .modal.modal--got-rid
     %p Confirm that you got rid of it?
     = form_for(@possession) do |f|
-      = f.text_area :got_rid_of_reason, placeholder: 'If so, why? (optional)'
+      = f.text_field :got_rid_of_reason, placeholder: 'If so, why? (optional)'
       = f.submit 'Confirm', class: :button
       .button.modal__close-modal Cancel
