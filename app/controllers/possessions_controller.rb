@@ -5,6 +5,7 @@ class PossessionsController < ApplicationController
   def index
     @even_categories, @odd_categories = Category.all.partition { |category| category.order.even? }
     @uncategorized_possessions = Possession.all.where(got_rid_of: false, category: nil)
+    @possession_count = Possession.all.where(got_rid_of: false).count
   end
 
   def new
