@@ -54,8 +54,8 @@ $possession-box__image-width: 82px;
 
 .possession-box__content__details {
   width: 100%;
-  padding-top: 0.25rem;
-  padding-left: 0.25rem;
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
   overflow: hidden;
   float: left;
 }
@@ -63,6 +63,7 @@ $possession-box__image-width: 82px;
 .possession-box__content__details__text {
   float: left;
   width: 80%;
+  line-height: 1.3;
 }
 
 .possession-box__content__details__date {
