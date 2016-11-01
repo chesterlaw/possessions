@@ -10,6 +10,7 @@ $possession-box__image-width: 82px;
 
   &:last-child {
     border-bottom: 1px solid black;
+    border-radius: 0 0 2px 2px;
   }
 }
 
@@ -32,6 +33,7 @@ $possession-box__image-width: 82px;
     position: relative;
     left: 27%;
     top: 19%;
+    color: #aaa;
   }
 }
 
@@ -45,7 +47,9 @@ $possession-box__image-width: 82px;
   background: black;
   color: white;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding: 0.3rem;
+  line-height: 1;
 }
 
 .possession-box__content__details {

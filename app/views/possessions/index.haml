@@ -5,17 +5,11 @@
 .content-wrapper
   .possession-column.possession-column--left
     - @odd_categories.each do |category|
-      .possession-group
-        .possession-group__title= category.name + " (#{category.possessions.count})"
-        - category.possessions.each do |possession|
-          = render 'components/possession_box', possession: possession
+      = render 'components/possession_group', category: category
 
   .possession-column.possession-column--right
     - @even_categories.each do |category|
-      .possession-group
-        .possession-group__title= category.name + " (#{category.possessions.count})"
-        - category.possessions.each do |possession|
-          = render 'components/possession_box', possession: possession
+      = render 'components/possession_group', category: category
 
     .possession-group
       .possession-group__title= "Misc (#{@uncategorized_possessions.count})"

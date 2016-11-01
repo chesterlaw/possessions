@@ -1,0 +1,8 @@
+.possession-group
+  .possession-group__title
+    .possession-group__title__name= category.name
+    .possession-group__title__count-circle
+      .possession-group__title__count-circle__height-fix
+      .possession-group__title__count-circle__number= category.possessions.count
+  - category.possessions.each do |possession|
+    = render 'components/possession_box', possession: possession

@@ -1,3 +1,5 @@
+$possession-group__count-font-size: 1.2rem;
+
 .possession-group {
   width: 100%;
   margin-bottom: 2.5rem;
@@ -6,7 +8,38 @@
 }
 
 .possession-group__title {
-  text-align: center;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+}
+
+.possession-group__title__name {
+  float: left;
+}
+
+.possession-group__title__count-circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 32px;
+  font-size: $possession-group__count-font-size;
+  line-height: 1em;
+  position: relative;
+  float: left;
+  margin-left: 0.3rem;
+  top: 0.1rem;
+}
+
+.possession-group__title__count-circle__height-fix {
+  margin-top: 100%;
+}
+
+.possession-group__title__count-circle__number {
+  position: absolute;
+  top: calc(50% + 1px);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -$possession-group__count-font-size/2;
 }
