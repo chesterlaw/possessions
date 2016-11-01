@@ -5,13 +5,10 @@
 .content-wrapper
   .possession-column.possession-column--left
     - @odd_categories.each do |category|
-      = render 'components/possession_group', category: category
+      = render 'components/possession_group', name: category.name, possessions: category.possessions
 
   .possession-column.possession-column--right
     - @even_categories.each do |category|
-      = render 'components/possession_group', category: category
+      = render 'components/possession_group', name: category.name, possessions: category.possessions
 
-    .possession-group
-      .possession-group__title= "Misc (#{@uncategorized_possessions.count})"
-      - @uncategorized_possessions.each do |possession|
-        = render 'components/possession_box', possession: possession
+    = render 'components/possession_group', name: :Misc, possessions: @uncategorized_possessions
