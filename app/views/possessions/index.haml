@@ -18,6 +18,6 @@
           = render 'components/possession_box', possession: possession
 
     .possession-group
-      .possession-group__title Misc
+      .possession-group__title= "Misc (#{@uncategorized_possessions.count})"
       - @uncategorized_possessions.each do |possession|
         = render 'components/possession_box', possession: possession
