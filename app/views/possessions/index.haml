@@ -5,10 +5,10 @@
 .content-wrapper
   .possession-column.possession-column--left
     - @odd_categories.each do |category|
-      = render 'components/possession_group', name: category.name, possessions: category.possessions
+      = render 'components/possession_group', name: category.name, possessions: category.possessions.where(got_rid_of: false)
 
   .possession-column.possession-column--right
     - @even_categories.each do |category|
-      = render 'components/possession_group', name: category.name, possessions: category.possessions
+      = render 'components/possession_group', name: category.name, possessions: category.possessions.where(got_rid_of: false)
 
     = render 'components/possession_group', name: :Misc, possessions: @uncategorized_possessions
